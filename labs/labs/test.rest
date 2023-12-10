@@ -1,0 +1,86 @@
+POST http://127.0.0.1:8000/signup
+Content-Type: application/json
+
+{ "username": "am", "password": "Pass1234!", "email": "adam@mail.com" }
+
+###
+
+POST http://127.0.0.1:8000/login
+Content-Type: application/json
+
+{ "username": "adam", "password": "Pass1234!" }
+
+###
+
+GET http://127.0.0.1:8000/test_token
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+###
+
+GET http://127.0.0.1:8000/playlists
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+###
+
+POST http://127.0.0.1:8000/playlists/create
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{ "title": "From the swarm", "public": false }
+
+###
+
+POST http://127.0.0.1:8000/playlists/create
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{ "title": "Pure imagination", "public": true }
+
+###
+
+GET http://127.0.0.1:8000/playlists/4
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+###
+
+GET http://127.0.0.1:8000/playlists/4
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+GET http://127.0.0.1:8000/playlists/public
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+GET http://127.0.0.1:8000/playlists/public
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+GET http://127.0.0.1:8000/playlists/public
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+POST http://127.0.0.1:8000/playlists/create
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+{ "title": "Doom kicks out", "public": false }
+
+###
+
+GET http://127.0.0.1:8000/playlists/available
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
