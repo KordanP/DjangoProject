@@ -4,9 +4,9 @@ from .models import Track,Playlist
 class TrackSerializer(serializers.ModelSerializer):
     class Meta(object):
         model = Track
-        fields = ['id', 'username', 'password', 'email']
+        fields = ['title', 'artist', 'duration']
 
 class PlaylistSerializer(serializers.ModelSerializer):
     class Meta(object):
         model = Playlist
-        fields = ['title', 'public']
+        fields = ['id','title', 'public']
