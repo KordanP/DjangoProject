@@ -1,0 +1,164 @@
+POST http://127.0.0.1:8000/signup
+Content-Type: application/json
+
+{ "username": "am", "password": "Pass1234!", "email": "adam@mail.com" }
+
+###
+
+POST http://127.0.0.1:8000/login
+Content-Type: application/json
+
+{ "username": "adam", "password": "Pass1234!" }
+
+###
+
+GET http://127.0.0.1:8000/test_token
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+###
+
+GET http://127.0.0.1:8000/playlists
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+###
+
+POST http://127.0.0.1:8000/playlists/create
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{ "title": "From the swarm", "public": false }
+
+###
+
+POST http://127.0.0.1:8000/playlists/create
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{ "title": "Pure imagination", "public": true }
+
+###
+
+GET http://127.0.0.1:8000/playlists/7
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+###
+
+GET http://127.0.0.1:8000/playlists/5
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+GET http://127.0.0.1:8000/playlists/public
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+GET http://127.0.0.1:8000/playlists/public
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+GET http://127.0.0.1:8000/playlists/public
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+POST http://127.0.0.1:8000/playlists/create
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+{ "title": "Doom kicks out", "public": false }
+
+###
+
+GET http://127.0.0.1:8000/playlists/available
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+POST http://127.0.0.1:8000/playlists/add/5
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{"title": "On the floor", "artist": "Lil peep", "duration": 206}
+
+###
+
+GET http://127.0.0.1:8000/playlists/tracks/7
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+###
+
+GET http://127.0.0.1:8000/playlists/tracks/7
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+GET http://127.0.0.1:8000/playlists/tracks/5
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+###
+
+GET http://127.0.0.1:8000/playlists/tracks/5
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+DELETE http://127.0.0.1:8000/playlists/delete/4/1
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+DELETE http://127.0.0.1:8000/playlists/delete/4
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+###
+
+PATCH http://127.0.0.1:8000/playlists/update
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+{ "id": 10, "title": "Doom kicks out", "public": false }
+
+###
+
+PATCH http://127.0.0.1:8000/playlists/update
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{ "id": 10, "title": "Pure imagination", "public": true }
+
+###
+
+PATCH http://127.0.0.1:8000/playlists/tracks/update
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{"id": 4, "title": "Summer Vibes", "artist": "Chillwave Artist", "duration": 180}
+
+###
+PATCH http://127.0.0.1:8000/playlists/tracks/update
+Content-Type: application/json
+Authorization: token c958bc39904ca39c81c22bb614b650b43f4770ad
+
+{"id": 4, "title": "Eclipse","artist": "Stellar Sound","duration": 240}
+
+
+###
+
+PUT http://127.0.0.1:8000/playlists/tracks/change
+Content-Type: application/json
+Authorization: token 9024cac2cc7b4e5ff7c6c88350502166c3bb21c2
+
+{"id": 5,"new_id": 7}
